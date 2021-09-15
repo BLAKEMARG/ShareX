@@ -213,7 +213,7 @@ namespace ShareX.UploadersLib.FileUploaders
             RandomNumberGenerator rng = RandomNumberGenerator.Create(); // Cryptographically secure
             rng.GetBytes(salt);
 
-            Rfc2898DeriveBytes rfcDeriver = new Rfc2898DeriveBytes(key, salt, PBKDF2_ITERATIONS, HashAlgorithmName.SHA256);
+            Rfc2898DeriveBytes rfcDeriver = new Rfc2898DeriveBytes(key, salt, PBKDF2_ITERATIONS);
 
             return new Vault_oooCryptoData
             {
